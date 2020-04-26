@@ -171,7 +171,7 @@ export default {
       try {
         const results = await voting.search(
           this.searchText,
-          this.pageData.page,
+          this.pageData.page ? this.pageData.page : 1,
           this.per
         );
         if (
